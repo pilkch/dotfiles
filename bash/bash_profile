@@ -10,6 +10,7 @@ fi
 # Let re-use ssh-agent and/or gpg-agent between logins
 keychain $HOME/.ssh/id_rsa
 source $HOME/.keychain/$HOSTNAME-sh
+source $HOME/.keychain/$HOSTNAME-sh-gpg
 ### END-Keychain ###
 
-# End of file ###
+# End of ~/.bash_profile

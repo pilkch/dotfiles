@@ -1,6 +1,6 @@
 #!/bin/zsh
 # ~/.zprofile
-# Last Modified: 12/04/2012 05:43:56 AM
+# Last Modified: 12/05/2013 04:26 AM ICT
 
 if [ -f ~/.zshrc ]; then
        source ~/.zshrc
@@ -10,6 +10,7 @@ fi
 # Let re-use ssh-agent and/or gpg-agent between logins
 keychain $HOME/.ssh/id_rsa
 source $HOME/.keychain/$HOSTNAME-sh
+source $HOME/.keychain/$HOSTNAME-sh-gpg
 ### END-Keychain ###
 
-# End of file ###
+# End of ~/.zprofile

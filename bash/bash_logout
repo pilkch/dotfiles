@@ -6,3 +6,5 @@
 
 # Clear the screen for security's sake.
 clear
+
+# End of ~/.bash_logout

@@ -1,9 +1,8 @@
 # ~/.screenrc
 # Last Modified: Wed 06 Feb 2013 10:35:13 AM ICT
 
-# screen -t irc irssi
-# screen -t music ncmpcpp
-# screen -t shell
+screen -t irc irssi
+screen -t shell
 
 autodetach      on              # autodetach on disconnect/close
 startup_message off             # disable intro msg
@@ -17,7 +16,7 @@ defutf8         on              # UTF-8 char encoding
 defflow         off             # disable flow control
 altscreen       on              # restore window contents after a vi session
 attrcolor       b ".I"
-shelltitle      tux
+shelltitle      mrtux-raspberrypi
 encoding        UTF-8
 
 termcapinfo     xterm|rxvt-* ti@:te@

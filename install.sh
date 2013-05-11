@@ -1,6 +1,6 @@
 #!/bin/bash
 # Filename: install.sh
-# Last Modified: Mon 07 Jan 2013 01:07:00 AM ICT
+# Last Modified: 12/05/2013 04:32 AM ICT
 
 cp bash/bashrc ~/.bashrc
 cp bash/bash_logout ~/.bash_logout
@@ -15,3 +15,5 @@ cp tmux/tmux.conf ~/.tmux.conf
 cp zsh/zlogout ~/.zlogout
 cp zsh/zprofile ~/.zprofile
 cp zsh/zshrc ~/.zshrc
+
+# End of install.sh
