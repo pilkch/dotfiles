@@ -1,6 +1,6 @@
 #!/bin/zsh
 # ~/.zshrc
-# Last Modified: 12/04/2012 05:43:56 AM
+# Last Modified: 12/05/2013 04:31 AM ICT
 
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
@@ -24,17 +24,53 @@ ZSH_THEME="bira"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment following line if you want red dots to be displayed while waiting for completion
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(archlinux cp command-not-found debian extract encode64 git git-extras git-flow git-hubflow git-remote-branch gitfast gnu-utils history history-substring-search lol rsync screen ssh-agent urltools wakeonlan)
+plugins=(archlinux cp command-not-found extract encode64 git git-extras git-flow git-hubflow git-remote-branch gitfast gnu-utils gpg-agent history history-substring-search lol rsync screen ssh-agent urltools wakeonlan)
 
 # source oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
+
+##### ZSH OPTIONS #####
+# Changing Directories
+setopt AUTO_CD           # why would you type 'cd dir' if you could just type 'dir'?
+setopt AUTO_NAME_DIRS    # This will use named dirs when possible
+setopt CDABLE_VARS
+setopt PUSHD_IGNORE_DUPS # this will ignore multiple directories for the stack
+setopt PUSHD_MINUS
+setopt ALWAYS_TO_END
+unsetopt LIST_AMBIGUOUS
+setopt COMPLETE_IN_WORD  # If unset, the cursor is set to the end of the word if
+                         # completion is started. Otherwise it stays there and
+                         # completion is done from both ends.
+setopt EXTENDED_GLOB     # I don't know why I never set this before.
+setopt NO_BEEP           # beeps are annoying
+setopt NO_CASE_GLOB      # Case insensitive globbing
+setopt NO_CLOBBER        # Keep echo "station" > station from clobbering station
+setopt NO_FLOW_CONTROL   # If I could disable Ctrl-s completely I would!
+setopt NO_HUP
+setopt NUMERIC_GLOB_SORT # Be Reasonable!
+setopt RM_STAR_WAIT      # 10 second wait if you do something that will delete everything
+setopt ZLE               # use magic (this is default, but it can't hurt!)
+
+# History Tweak
+setopt APPEND_HISTORY         # Don't overwrite, append!
+setopt EXTENDED_HISTORY       # Save the time and how long a command ran
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt HIST_FIND_NO_DUPS
+setopt HIST_IGNORE_ALL_DUPS   # Even if there are commands inbetween commands that are the same, still only save the last one
+setopt HIST_IGNORE_DUPS       # If I type cd and then cd again, only save the last one
+setopt HIST_IGNORE_SPACE      # If a line starts with a space, don't save it.
+setopt HIST_NO_STORE
+setopt HIST_REDUCE_BLANKS     # Pretty    Obvious.  Right?
+setopt HIST_SAVE_NO_DUPS
+setopt HIST_VERIFY            # When using a hist thing, make a newline show the change before executing it.
+setopt SHARE_HISTORY          # Killer: share history between multiple shells
 
 # Color listing
 eval $(dircolors ~/.dir_colors)
